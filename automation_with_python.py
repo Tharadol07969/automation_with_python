@@ -1,7 +1,7 @@
 import openpyxl as xl
 from openpyxl.chart import BarChart, Reference
 
-wb = xl.load_workbook(r'D:\job\Datacamp\Data with Baraa\Python\python_learning\mosh\project\automation_with_python\data\transactions.xlsx')
+wb = xl.load_workbook('transactions.xlsx')
 sheet = wb['Sheet1']
 cell = sheet['a1']
 cell = sheet.cell(1,1)
@@ -23,4 +23,5 @@ chart = BarChart()
 chart.add_data(values)
 sheet.add_chart(chart, 'e2')
 
-wb.save(r'D:\job\Datacamp\Data with Baraa\Python\python_learning\mosh\project\automation_with_python\data\transactions_corrected.xlsx')
+
+wb.save('transactions_corrected.xlsx')
